@@ -1,23 +1,22 @@
-console.log('Init');
-
-chrome.alarms.create('', { delayInMinutes: 0.2, periodInMinutes: 0.2 });
+chrome.alarms.create('', { delayInMinutes: 30, periodInMinutes: 30 });
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
 
-  var cutoffTime = (new Date()).getTime() - (90 * 24 * 3600 * 1000);
+  chrome.storage.local.get('maxAge', (res) => {
+    console.log(res.maxAge);
+    var maxAge = res.maxAge || 0;
 
-  console.log('Searching history:' + cutoffTime);
-  chrome.history.search({
-      text: '',
+    if (maxAge === 0) {
+      // Not a valid age, do nothing.
+      return;
+    }
+
+    var cutoffTime = (new Date()).getTime() - (maxAge * 24 * 3600 *
+      1000);
+
+    chrome.history.deleteRange({
       startTime: 0,
       endTime: cutoffTime,
-      maxResults: 32,
-    },
-    function (results) {
-      console.log(results);
-      console.log('Would remove:');
-      for (var i = 0; i < results.length; i += 1) {
-        console.log(results[i]);
-      }
     });
+  });
 });

@@ -6,14 +6,18 @@
 
     "applications": {
         "gecko": {
-            "id": "test@test.org"
+          "strict_min_version": "49.*"
         }
     },
     "permissions": [
         "alarms",
-        "history"
+        "history",
+        "storage"
     ],
     "background": {
         "scripts": ["purge-daemon.js"]
+    },
+    "options_ui": {
+        "page": "options.html"
     }
 }
