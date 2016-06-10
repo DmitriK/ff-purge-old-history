@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Clean Old History",
-    "version": "0.1",
+    "name": "Purge Old History",
+    "version": "1.0",
     "description": "Removes history entries older than a specified age.",
 
     "applications": {
