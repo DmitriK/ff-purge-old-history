@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Clean Old History",
+    "version": "0.1",
+    "description": "Removes history entries older than a specified age.",
+
+    "applications": {
+        "gecko": {
+            "id": "test@test.org"
+        }
+    },
+    "permissions": [
+        "alarms",
+        "history"
+    ],
+    "background": {
+        "scripts": ["purge-daemon.js"]
+    }
+}
