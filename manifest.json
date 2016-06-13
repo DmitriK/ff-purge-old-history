@@ -6,7 +6,7 @@
 
     "applications": {
         "gecko": {
-          "id":"46f2ce77-9195-413c-a208-6fda420c7507",
+          "id":"purge-old-hist@monochrome101.addons.mozilla.org",
           "strict_min_version": "49.*"
         }
     },
