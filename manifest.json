@@ -1,11 +1,12 @@
 {
     "manifest_version": 2,
     "name": "Purge Old History",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "Removes history entries older than a specified age.",
 
     "applications": {
         "gecko": {
+          "id":"46f2ce77-9195-413c-a208-6fda420c7507",
           "strict_min_version": "49.*"
         }
     },
