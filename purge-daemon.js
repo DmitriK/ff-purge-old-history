@@ -3,7 +3,6 @@ chrome.alarms.create('', { delayInMinutes: 30, periodInMinutes: 30 });
 chrome.alarms.onAlarm.addListener(function (alarm) {
 
   chrome.storage.local.get('maxAge', (res) => {
-    console.log(res.maxAge);
     var maxAge = res.maxAge || 0;
 
     if (maxAge === 0) {
