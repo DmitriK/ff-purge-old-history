@@ -1,13 +1,13 @@
 {
     "manifest_version": 2,
     "name": "Purge Old History",
-    "version": "1.0.1",
-    "description": "Removes history entries older than a specified age.",
+    "version": "1.0.2",
+    "description": "Periodically removes history entries older than a specified age.",
 
     "applications": {
         "gecko": {
           "id":"purge-old-hist@monochrome101.addons.mozilla.org",
-          "strict_min_version": "49.*"
+          "strict_min_version": "49.0a2"
         }
     },
     "permissions": [
